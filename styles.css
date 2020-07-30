@@ -1,0 +1,193 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    min-height: 450px;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient();
+    background-color: rosybrown;
+    font-family: "Work sans", sans-serif;
+    letter-spacing: 2px;
+}
+
+button, input, select, textarea{
+    font-family: "Work sans", sans-serif;
+    font-size: inherit;
+    line-height: inherit;
+
+}
+.ToDo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 500px;
+    background-color:  #BCD4E6;
+    border-radius: 10px;
+    box-shadow: 0 7px 30px rgba(62, 9, 11, .3);
+}
+
+.cover-image{
+    background-image: url(img/panwa.jpg);
+    height: 190px;
+    background-size: cover;
+    background-position: 10% 20%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    position: relative;
+}
+
+.cover-image .cover-inner::after{
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.cover-image h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Work sans", sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    font-weight: 600;
+}
+
+.content{
+    padding: 10px 20px;
+}
+
+.content form{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 0 10px 0;
+    background: transparent;
+    border: none;
+    height: 25px;
+}
+
+.content form > * {
+
+    background: transparent; 
+    border:none;
+    height: 35px;
+
+}
+
+.content input[type='text']{
+    padding: 0;
+    font-weight: 100;
+    font-size: 1.1rem;
+    color: whitesmoke;
+    outline: none;
+
+}
+
+.content .input-buttons a{
+    text-decoration: none;
+}
+
+.content .input-buttons i{
+    margin-top: 5px;
+    font-size: 20px;
+
+}
+
+.content ul.todo{
+    padding: 0;
+    margin-left: 0;
+    letter-spacing: 2px;
+    height: 200px;
+    overflow: auto;
+    
+}
+
+.content li{
+    user-select: none;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.content li i{
+    font-size:15 px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.content input[type="checkbox"]{
+    display: none;
+}
+
+.content input[type="checkbox"]+label{
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.content input[type="checkbox"]+label:hover{
+    color: #353a42;
+    background-color: #f4f7fa;
+}
+
+.content input[type="checkbox"]+label span.check{
+    left: 4px;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%);
+    display: block;
+    width: 15px;
+    height: 15px;
+}
+
+.content input[type="checkbox"]:checked + label{
+    text-decoration: line-through;
+}
+
+.content input[type="checkbox"]:checked + label span.check{
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.content input[type="checkbox"] + label span.check::after{
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    position: absolute;
+
+}
+
+.content input[type="checkbox"] + label span.check::before{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    content:'';
+    position:absolute;
+    transform: scale(0);
+
+}
+
+.content input[type="checkbox"]:checked + label span.check::before{
+    opacity: 0;
+    transform: scale(1.2);
+}
