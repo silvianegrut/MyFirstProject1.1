@@ -29,7 +29,7 @@ function addTodos(e) {
     listLenght = listLenght + 1;
     generateTemplate(todo);
     submitForm.reset();
-    //saveTodos();
+    
   }
 }
 
@@ -42,7 +42,7 @@ function deleteTodos(e) {
   console.log(e.target);
   if (e.target.classList.contains('delete')) {
       e.target.parentElement.remove();
-      //saveTodos();
+      
   }
 }
 
@@ -53,28 +53,5 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
-
-//save data to local storage
-function saveTodos(){
-  var str=JSON.stringify(todos);
-  localStorage.setItem("todos", str);
-}
-
-class Store{
-  static getTodos(){
-    let todos;
-    if(localStorage.getItem('todos')===null){
-      todos=[];
-    } else{
-      todos=JSON.parse(localStorage.getItem('todos'));
-    }
-    return todos;
-  }
-  static addTodo(todo){
-    const todos=Store.getTodos();
-    todos.push(todo);
-    localStorage.setItem('todos', JSON.stringify(todos));
-  }
-}
 
 
