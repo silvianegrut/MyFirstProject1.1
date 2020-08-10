@@ -8,7 +8,6 @@ body{
     height: 100vh;
     margin: 0;
     padding: 0;
-    background: radial-gradient();
     background-color: rosybrown;
     font-family: "Work sans", sans-serif;
     letter-spacing: 2px;
@@ -20,6 +19,8 @@ button, input, select, textarea{
     line-height: inherit;
 
 }
+
+/* ToDo list */
 .ToDo{
     position: absolute;
     top: 50%;
@@ -32,6 +33,7 @@ button, input, select, textarea{
     box-shadow: 0 7px 30px rgba(62, 9, 11, .3);
 }
 
+/* Header image */
 .cover-image{
     background-image: url(img/panwa.jpg);
     height: 190px;
@@ -63,6 +65,7 @@ button, input, select, textarea{
     font-weight: 600;
 }
 
+/* Main Content */
 .content{
     padding: 10px 20px;
 }
